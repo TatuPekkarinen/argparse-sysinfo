@@ -10,6 +10,7 @@ dependencies = [
 ]
 
 [tool.setuptools]
+package-dir = {"" = "src"}
 py-modules = ["main", "parameters"]
 
 [project.scripts]
