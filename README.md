@@ -5,7 +5,7 @@ Command-line system information, built on [psutil](https://github.com/giampaolo/
 ## Install
 
 ```
-git clone (coremon-sysinfo repository)
+git clone https://github.com/TatuPekkarinen/coremon-sysinfo
 cd coremon-sysinfo
 pip install -e .
 ```
