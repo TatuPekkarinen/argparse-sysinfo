@@ -1,6 +1,6 @@
 # coremon-sysinfo
 
-Command-line system information, built on [psutil](https://github.com/giampaolo/psutil). CPU cores for now; memory and disk planned.
+Command-line system information, built on [psutil](https://github.com/giampaolo/psutil). CPU cores for now, memory and disk planned.
 
 ## Install
 
