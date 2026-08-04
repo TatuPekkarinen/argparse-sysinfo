@@ -1,12 +1,12 @@
-# coremon-sysinfo
+# argparse-sysinfo
 
-Command-line system information, built on [psutil](https://github.com/giampaolo/psutil). CPU cores for now, memory and disk planned.
+Command-line system information, built on [psutil](https://github.com/giampaolo/psutil) as a test of argparse library. Easily expandable.
 
 ## Install
 
 ```
-git clone https://github.com/TatuPekkarinen/coremon-sysinfo
-cd coremon-sysinfo
+git clone https://github.com/TatuPekkarinen/argparse-sysinfo
+cd argparse-sysinfo
 pip install -e .
 ```
 
