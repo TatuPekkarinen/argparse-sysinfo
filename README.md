@@ -26,6 +26,14 @@ Core 0: 40.0%
 Core 1: 23.1%
 Core 2: 0.0%
 ...
+Current Frequency: 4700.0 MHz
+```
+
+```
+$ coremon mem
+Total memory: 31.000000 GB
+Used: 16.000000 GB
+...
 ```
 
 ## Requirements
