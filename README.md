@@ -33,7 +33,6 @@ Current Frequency: 4700.0 MHz
 $ coremon mem
 Total memory: 31.000000 GB
 Used: 16.000000 GB
-...
 ```
 
 ## Requirements
