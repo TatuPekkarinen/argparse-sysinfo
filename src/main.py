@@ -1,12 +1,16 @@
 #internal
 import argparse
-from parameters import ParamInfo
+import subprocess
+import os
 
 #external
 import psutil
 
-def byte_to_gig(n):
-    return n / 1024 ** 3
+#local
+from parameters import ParamInfo
+
+def byte_to_gig(byte):
+    return byte / 1024 ** 3
 
 def main():
     parser = argparse.ArgumentParser(prog="coremon")
@@ -14,13 +18,14 @@ def main():
 
     sub.add_parser("core")
     sub.add_parser("mem")
+    sub.add_parser("cwd")
     sub.add_parser("version")
 
     args = parser.parse_args()
     match args.subarg:
         case "core": 
-            print(f"Logical: [{psutil.cpu_count()} Threads]")
-            print(f"Physical: [{psutil.cpu_count(logical=False) or '(Unknown)'} Cores]")
+            cpuinf_path = os.path.join(os.path.dirname(__file__), "exec", "cpuinf.exe")
+            subprocess.run([f"{cpuinf_path}"], shell=True)
             for core_num, percentage in enumerate(psutil.cpu_percent(interval=1, percpu=True)):
                 print(f"Core {core_num}: {percentage}%")
             frequency = psutil.cpu_freq(percpu=False)
@@ -28,8 +33,8 @@ def main():
             print(f"Current Frequency: {freq_current} MHz")
         case "mem":
             memory = psutil.virtual_memory()
-            print(f"Total memory: {int(byte_to_gig(memory.total)):2f} GB")
-            print(f"Used: {int(byte_to_gig(memory.available)):2f} GB")
+            print(f"Total memory: {byte_to_gig(memory.total):2f} GB")
+            print(f"Memory used: {byte_to_gig(memory.used):2f} GB")
         case "version":
             print(f"Current version: ({ParamInfo.version})")
         case _:
