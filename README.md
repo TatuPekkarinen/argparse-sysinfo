@@ -20,9 +20,8 @@ Add the exec folder path to your antivirus exclusion list to grant permissions.
 
 ```
 coremon core      # core counts and per-core usage
-coremon mem      # gives information on RAM usage
+coremon mem       # gives information on RAM usage
 coremon version   # version info
-coremon --help    # available commands
 ```
 
 ```
@@ -30,7 +29,7 @@ $ coremon core
 Logical: 16 Threads
 Processor (vendor): AuthenticAMD
 Core 0: 40.0%
-Core 1: 23.1%
+Core 1: 23.1%S
 Core 2: 0.0%
 ...
 Current Frequency: 4700.0 MHz
@@ -44,4 +43,4 @@ Used: 16.000000 GB
 
 ## Requirements
 
-Python 3.10+ and `psutil`.
+Python 3.10+, Windows and `psutil`.
