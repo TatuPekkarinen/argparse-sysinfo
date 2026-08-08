@@ -11,7 +11,7 @@ pip install -e .
 
 Compile using GCC by running: gcc cpuinf.c -o cpuinf.exe
 Move the compiled file directly into the exec folder.
-Modern antivirus will likely flag this file as a false positive.
+Modern antivirus will likely flag this file as a false positive as it happened to me too.
 Add the exec folder path to your antivirus exclusion list to grant permissions.
 
 ```
