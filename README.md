@@ -8,6 +8,12 @@ Command-line system information, built on [psutil](https://github.com/giampaolo/
 git clone https://github.com/TatuPekkarinen/argparse-sysinfo
 cd argparse-sysinfo
 pip install -e .
+
+Compile using GCC by running: gcc cpuinf.c -o cpuinf.exe
+Move the compiled file directly into the exec folder.
+Modern antivirus will likely flag this file as a false positive.
+Add the exec folder path to your antivirus exclusion list to grant permissions.
+
 ```
 
 ## Usage
